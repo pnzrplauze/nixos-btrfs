@@ -4,7 +4,7 @@
     settings = {
       env.TERM = "xterm-256color";
       window.decorations = "full";
-      font.size = 9.0;
+      font.size = 8.0;
       cursor.style = "Beam";
 
       # snazzy theme
