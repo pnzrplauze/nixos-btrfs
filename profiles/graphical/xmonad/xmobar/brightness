@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 (( br = $(brightnessctl get) * 100 / 255 ))
 

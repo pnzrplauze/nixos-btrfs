@@ -1,10 +1,10 @@
-#! /bin/bash
+#!/usr/bin/env zsh
 
 # TODO: Use amixer rather than /proc to determine mute status
 
 # $MUTE is the 'n' of "on" if the sound is muted, the 'f' of "off" if not
 MUTE=`pamixer --get-mute`
-if [ "$MUTE" == "true" ]; then
+if [[ "$MUTE" == "true" ]]; then
       COLOUR="red"
       ICON="ﱝ "
 else

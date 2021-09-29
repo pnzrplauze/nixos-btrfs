@@ -1,19 +1,19 @@
-#! /bin/bash
+#!/usr/bin/env zsh
 
 # A better method; requires the acpi package
 
 # Get percentage
-VALUE=`acpi -b | sed s/%.*$// | sed 's/^.*\s//'`
+VALUE=`acpi -b | sed 's/%.*$//' | sed 's/^.*\s//'`
 
 # Get charging status ("C"=charging, "D"=dischaging)
 CHARGING=`acpi | tail -c +12 | head -c 1`
 
 # Calculate colour
-if [ "$CHARGING" == "C" ]; then
+if [[ "$CHARGING" == "C" ]]; then
         COLOUR="yellow"
         ICON=" "
 else
-if [ "$VALUE" -gt "10" ]; then
+if [[ "$VALUE" -gt "10" ]]; then
         COLOUR="green"
         ICON=" "
     else

@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env zsh
 #
 # Writes the title and artist of the song currently being played by MPD or MOC to STDOUT, formatted for xmobar
 # If MPD is playing a song or is paused, its information will be written. If not, MOC will be checked similarly.
