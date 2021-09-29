@@ -9,7 +9,7 @@ VALUE=`acpi -b | sed 's/%.*$//' | sed 's/^.*\s//'`
 CHARGING=`acpi | tail -c +12 | head -c 1`
 
 # Calculate colour
-if [[ "$CHARGING" == "C" ]]; then
+if [[ "$CHARGING" == "F" ]]; then
         COLOUR="yellow"
         ICON=" "
 else
