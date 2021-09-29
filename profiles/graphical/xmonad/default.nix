@@ -6,7 +6,7 @@
     maim
     xclip
     xorg.xdpyinfo
-    dunst
+    # dunst
     haskellPackages.xmobar
   ];
 
