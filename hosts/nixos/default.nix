@@ -15,6 +15,7 @@
   environment.systemPackages = with pkgs; [
     xorg.setxkbmap
     xorg.xset
+    brightnessctl
   ];
   # services.udev.extraRules = ''
   #   SUBSYSTEM=="usb", ATTR{idVendor}=="3297", GROUP="input"

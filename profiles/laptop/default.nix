@@ -10,22 +10,22 @@
   hardware.bluetooth.enable = true;
 
   # to enable brightness keys 'keys' value may need updating per device
-  programs.light.enable = true;
-  services.actkbd = {
-    enable = true;
-    bindings = [
-      {
-        keys = [ 225 ];
-        events = [ "key" ];
-        command = "/run/current-system/sw/bin/light -A 5";
-      }
-      {
-        keys = [ 224 ];
-        events = [ "key" ];
-        command = "/run/current-system/sw/bin/light -U 5";
-      }
-    ];
-  };
+  # programs.light.enable = true;
+  # services.actkbd = {
+  #   enable = true;
+  #   bindings = [
+  #     {
+  #       keys = [ 225 ];
+  #       events = [ "key" ];
+  #       command = "/run/current-system/sw/bin/light -A 5";
+  #     }
+  #     {
+  #       keys = [ 224 ];
+  #       events = [ "key" ];
+  #       command = "/run/current-system/sw/bin/light -U 5";
+  #     }
+  #   ];
+  # };
 
   sound.mediaKeys = lib.mkIf (!config.hardware.pulseaudio.enable) {
     enable = true;
