@@ -1,0 +1,26 @@
+#! /bin/bash
+
+# A better method; requires the acpi package
+
+# Get percentage
+VALUE=`acpi -b | sed s/%.*$// | sed 's/^.*\s//'`
+
+# Get charging status ("C"=charging, "D"=dischaging)
+CHARGING=`acpi | tail -c +12 | head -c 1`
+
+# Calculate colour
+if [ "$CHARGING" == "C" ]; then
+        COLOUR="yellow"
+        ICON=" "
+else
+if [ "$VALUE" -gt "10" ]; then
+        COLOUR="green"
+        ICON=" "
+    else
+        COLOUR="red"
+        ICON=" "
+    fi
+fi
+
+# Format and print
+echo "<fc=$COLOUR>$ICON$VALUE% </fc>"
