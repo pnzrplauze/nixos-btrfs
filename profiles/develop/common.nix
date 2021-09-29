@@ -34,7 +34,7 @@
   fonts =
     let
       nerdfonts = pkgs.nerdfonts.override {
-        fonts = [ "DejaVuSansMono" "JetBrainsMono" "Overpass" "Blex" ];
+        fonts = [ "DejaVuSansMono" "JetBrainsMono" "Overpass" "IBMPlexMono" ];
       };
     in
     {
