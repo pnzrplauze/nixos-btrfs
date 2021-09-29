@@ -15,16 +15,16 @@ in
 
   age.secrets = {
     nixos.file = "${self}/secrets/secret.age";
-    # root.file = "${self}/secrets/root.age";
-    # jack.file = "${self}/secrets/jack.age";
-    # github.file = "${self}/secrets/github.age";
-    # github.owner = "jack";
-    # gitlab.file = "${self}/secrets/gitlab.age";
-    # gitlab.owner = "jack";
-    # cargo.file = "${self}/secrets/cargo.age";
-    # cargo.owner = "jack";
-    # cachix.file = "${self}/secrets/cachix.age";
-    # cachix.owner = "jack";
+    root.file = "${self}/secrets/root.age";
+    jack.file = "${self}/secrets/jack.age";
+    github.file = "${self}/secrets/github.age";
+    github.owner = "jack";
+    gitlab.file = "${self}/secrets/gitlab.age";
+    gitlab.owner = "jack";
+    cargo.file = "${self}/secrets/cargo.age";
+    cargo.owner = "jack";
+    cachix.file = "${self}/secrets/cachix.age";
+    cachix.owner = "jack";
   };
 
 
@@ -50,11 +50,10 @@ in
       activation.myActivationAction =
         lib.hm.dag.entryAfter [ "writeBoundary" ] ''
           mkdir -p ~/{,.cargo,.ssh,.config/cachix}
+          ln -sf ${config.age.secrets.cargo.path} ~/.cargo/credentials
+          ln -sf ${config.age.secrets.cachix.path} ~/.config/cachix/cachix.dhall
         '';
     };
-
-    # ln -sf ${config.age.secrets.cargo.path} ~/.cargo/credentials
-    # ln -sf ${config.age.secrets.cachix.path} ~/.config/cachix/cachix.dhall
 
     # programs.go = {
     #   enable = true;
