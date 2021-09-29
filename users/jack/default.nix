@@ -50,10 +50,11 @@ in
       activation.myActivationAction =
         lib.hm.dag.entryAfter [ "writeBoundary" ] ''
           mkdir -p ~/{,.cargo,.ssh,.config/cachix}
-          ln -sf ${config.age.secrets.cargo.path} ~/.cargo/credentials
-          ln -sf ${config.age.secrets.cachix.path} ~/.config/cachix/cachix.dhall
         '';
     };
+
+    # ln -sf ${config.age.secrets.cargo.path} ~/.cargo/credentials
+    # ln -sf ${config.age.secrets.cachix.path} ~/.config/cachix/cachix.dhall
 
     # programs.go = {
     #   enable = true;
