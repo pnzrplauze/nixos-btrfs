@@ -109,6 +109,7 @@ myStartupHook = do
     -- spawnOnce "/usr/bin/emacs --daemon &" -- emacs daemon for the emacsclient
     -- spawnOnce "unclutter &"
     spawnOnce "dunst &"
+    spawnOnce "xss-lock slock &"
     spawnOnce "setxkbmap pl &"
     spawnOnce "xset r rate 300 50 &"
     -- spawnOnce "mpd &"
