@@ -34,13 +34,15 @@
   fonts =
     let
       nerdfonts = pkgs.nerdfonts.override {
-        fonts = [ "DejaVuSansMono" "JetBrainsMono" ];
+        fonts = [ "DejaVuSansMono" "JetBrainsMono" "Overpass" "Blex" ];
       };
     in
     {
       fonts = [ nerdfonts ];
-      fontconfig.defaultFonts.monospace =
-        [ "DejaVu Sans Mono Nerd Font Complete Mono" ];
+      fontconfig.defaultFonts = {
+        monospace = [ "JetBrains Mono Regular Nerd Font Complete Mono" ];
+        sansSerif = [ "DejaVu Sans Mono Nerd Font Complete Mono" ];
+      };
     };
 
   documentation = {

@@ -106,12 +106,10 @@ in
     fonts = with pkgs; [
       powerline-fonts
       dejavu_fonts
+      julia-mono
+      merriweather
+      alegreya
     ];
-
-    fontconfig.defaultFonts = {
-      monospace = [ "DejaVu Sans Mono for Powerline" ];
-      sansSerif = [ "DejaVu Sans" ];
-    };
   };
 
   nix = {
@@ -133,10 +131,10 @@ in
 
   programs.bash = {
     promptInit = ''
-      eval "$(${pkgs.starship}/bin/starship init bash)"
+      eval "$(${pkgs.starship}/bin/starship init zsh)"
     '';
     interactiveShellInit = ''
-      eval "$(${pkgs.direnv}/bin/direnv hook bash)"
+      eval "$(${pkgs.direnv}/bin/direnv hook zsh)"
     '';
   };
 
