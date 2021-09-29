@@ -162,7 +162,7 @@ in
 
         ${bashCompletion}
 
-        eval "$(${pkgs.direnv}/bin/direnv hook bash)"
+        eval "$(${pkgs.direnv}/bin/direnv hook zsh)"
         eval $(${pkgs.gitAndTools.hub}/bin/hub alias -s)
         source ${pkgs.skim}/share/skim/key-bindings.zsh
 
