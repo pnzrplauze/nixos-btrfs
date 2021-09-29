@@ -89,12 +89,12 @@ in
       matchBlocks = {
         github = {
           host = "github.com";
-          # identityFile = config.age.secrets.github.path;
+          identityFile = config.age.secrets.github.path;
           extraOptions = { AddKeysToAgent = "yes"; };
         };
         gitlab = {
           host = "gitlab.com";
-          # identityFile = config.age.secrets.gitlab.path;
+          identityFile = config.age.secrets.gitlab.path;
           extraOptions = { AddKeysToAgent = "yes"; };
         };
       };
