@@ -106,7 +106,7 @@ in
   users.users.jack = {
     description = name;
     isNormalUser = true;
-    hashedPassword = "$6$0DzbAV7lbnH8kS/E$P53OZ4GDDGiPl1RiImw9eGLIWtBJrf1cZmrMgbANJEJUvgc4j/fY69jElbzzFWJ7EkUhyGdXG0QBAHrAPGFng0";
+    hashedPassword = "$6$rU/gd7Dm/$dFxMqcDfAvuk5llGOK4lH7lMh5jH6/.SKSuYr8HQZrwBYorOIcn3hb8cEbOsyBbNb2MmWPqJP65.rbMkkfmex0";
     extraGroups = [ "wheel" "input" "networkmanager" "libvirtd" "adbusers" ];
   };
 }
