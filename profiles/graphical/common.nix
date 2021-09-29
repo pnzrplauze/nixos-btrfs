@@ -74,6 +74,7 @@ in
       networkmanager_dmenu
       alacritty
       firefox
+      starship
     ];
   };
 
