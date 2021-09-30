@@ -5,6 +5,8 @@
   #   imports = [ ./emacs ];
   # };
 
+  services.emacs.enable = true;
+
   environment.shellAliases = {
     v = "$EDITOR";
     pass = "gopass";

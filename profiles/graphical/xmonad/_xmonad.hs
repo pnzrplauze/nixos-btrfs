@@ -79,10 +79,10 @@ myBrowser :: String
 myBrowser = "firefox"  -- Sets qutebrowser as browser
 
 myEmacs :: String
-myEmacs = "emacsclient -c -a 'emacs' "  -- Makes emacs keybindings easier to type
+myEmacs = "emacsclient -c -a 'emacs'"  -- Makes emacs keybindings easier to type
 
 myEditor :: String
-myEditor = "emacsclient -c -a 'emacs' "  -- Sets emacs as editor
+myEditor = "emacsclient -c -a 'emacs'"  -- Sets emacs as editor
 -- myEditor = myTerminal ++ " -e vim "    -- Sets vim as editor
 
 myBorderWidth :: Dimension
@@ -366,7 +366,7 @@ myKeys =
         , ("M-S-q", spawn "sysact")   -- Kill all windows on current workspace
         , ("M-<F5>", spawn "displayselect")
         , ("M-r", spawn (myTerminal ++ "nnn"))
-        , ("M-n", spawn "emacsclient -c -a emacs")
+        , ("M-n", spawn "emacsclient -c -a 'emacs'")
 
     -- Workspaces
         , ("M-.", nextScreen)  -- Switch focus to next monitor
