@@ -20,16 +20,6 @@ in
       in
       {
         BAT_PAGER = "less";
-        # SKIM_ALT_C_COMMAND =
-        #   let
-        #     alt_c_cmd = pkgs.writeScriptBin "cdr-skim.zsh" ''
-        #       #!${pkgs.zsh}/bin/zsh
-        #       ${fileContents ./cdr-skim.zsh}
-        #     '';
-        #   in
-        #   "${alt_c_cmd}/bin/cdr-skim.zsh";
-        # SKIM_DEFAULT_COMMAND = fd;
-        # SKIM_CTRL_T_COMMAND = fd;
       };
 
     shellAliases = {
@@ -144,11 +134,6 @@ in
         localCompletions = toString ./completions;
 
         bashCompletion = ''
-          complete -o nospace -C ${pkgs.nomad}/bin/nomad nomad
-          complete -o nospace -C ${pkgs.consul}/bin/consul consul
-          complete -o nospace -C ${pkgs.vault-bin}/bin/vault vault
-          complete -o nospace -C ${pkgs.terraform}/bin/terraform terraform
-          complete -o nospace -C ${pkgs.awscli}/bin/aws_completer aws
         '';
 
       in
@@ -164,7 +149,6 @@ in
 
         eval "$(${pkgs.direnv}/bin/direnv hook zsh)"
         eval $(${pkgs.gitAndTools.hub}/bin/hub alias -s)
-        source ${pkgs.skim}/share/skim/key-bindings.zsh
 
         # needs to remain at bottom so as not to be overwritten
         bindkey jj vi-cmd-mode
