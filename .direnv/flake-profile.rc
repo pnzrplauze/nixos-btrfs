@@ -56,6 +56,7 @@ export system
 runHook ()
 {
  
+    eval "$shellHook";
     unset runHook
 }
 PATH="$PATH:$nix_saved_PATH"
@@ -64,3 +65,4 @@ export TMP="$NIX_BUILD_TOP"
 export TMPDIR="$NIX_BUILD_TOP"
 export TEMP="$NIX_BUILD_TOP"
 export TEMPDIR="$NIX_BUILD_TOP"
+eval "$shellHook"
