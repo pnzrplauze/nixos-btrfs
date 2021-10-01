@@ -17,6 +17,7 @@ in
   programs.neovim = {
     enable = true;
     # package = nixos-unstable.neovim-unwrapped;
+    package = pkgs.unstable.neovim-unwrapped;
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
