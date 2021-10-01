@@ -12,8 +12,9 @@
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ config.boot.kernelPackages.rtw89 ];
-  hardware.firmware = [ pkgs.linuxPackages_zen.rtw89 ];
+  boot.extraModulePackages = [ ];
+  # config.boot.kernelPackages.rtw89
+  # hardware.firmware = [ pkgs.linuxPackages_zen.rtw89 ];
 
   fileSystems."/" =
     {
