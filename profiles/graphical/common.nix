@@ -98,6 +98,7 @@ in
       networkmanager_dmenu
       alacritty
       firefox
+      pcmanfm
     ];
   };
 
