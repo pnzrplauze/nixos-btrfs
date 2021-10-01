@@ -1,1 +1,2 @@
 * Placeholder for notes about the config.
+doom emacs, wallpaper, .zshrc
