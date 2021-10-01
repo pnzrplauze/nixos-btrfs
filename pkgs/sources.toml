@@ -6,7 +6,3 @@ fetch.github = "mlvzk/manix"
 [sddm-chili]
 src.github = "MarianArlt/sddm-chili"
 fetch.github = "MarianArlt/sddm-chili"
-#
-# [rtw89]
-# src.git = "https://github.com/lwfinger/rtw89"
-# fetch.github = "lwfinger/rtw89"
