@@ -7,7 +7,7 @@
       font.size = 8.0;
       cursor.style = "Beam";
 
-      # snazzy theme
+      # doom-one theme
       colors = {
         # Default colors
         primary = {
