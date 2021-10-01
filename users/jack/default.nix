@@ -69,6 +69,15 @@ in
       };
     };
 
+    services.mpd = {
+      enable = true;
+      extraConfig = ''
+            audio_output {
+        type "pulse"
+              name "Pulseaudio"
+            }'';
+    };
+
     programs.git = {
       userName = name;
       userEmail = "hadesranger@gmail.com";
