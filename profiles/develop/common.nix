@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  imports = [ ./zsh ./emacs ./nvim ];
+  imports = [ ./zsh ./emacs ];
 
   # home-manager.users.jack = {
   #   imports = [ ./emacs ];
@@ -27,6 +27,7 @@
     gopass
     tig
     wget
+    neovim
   ];
 
   fonts =
