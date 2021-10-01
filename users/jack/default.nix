@@ -60,25 +60,6 @@ in
     #   goPath = "go";
     # };
 
-    sound.enable = true;
-
-    hardware.pulseaudio = {
-      enable = true;
-      support32Bit = true;
-      extraConfig = "load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1";
-    };
-
-    services.mpd = {
-      enable = true;
-      extraConfig = ''
-            audio_output {
-              type "pulse"
-              name "Pulseaudio"
-        server "127.0.0.1"
-          }
-      '';
-    };
-
     programs.mpv = {
       enable = true;
       config = {
