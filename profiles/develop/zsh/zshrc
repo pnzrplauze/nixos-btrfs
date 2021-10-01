@@ -1,4 +1,6 @@
-# useful functions
+export PATH=$PATH:/home/jack/.emacs.d/bin/
+export PATH=$PATH:/home/jack/.config/xmobar/
+#useful functions
 autoload -Uz zmv zcalc zargs url-quote-magic bracketed-paste-magic
 zle -N self-insert url-quote-magic
 zle -N bracketed-paste bracketed-paste-magic

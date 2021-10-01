@@ -97,7 +97,6 @@ in
         zshrc = fileContents ./zshrc;
 
         sources = with pkgs; [
-          ./cdr.zsh
           "${oh-my-zsh}/share/oh-my-zsh/plugins/sudo/sudo.plugin.zsh"
           "${oh-my-zsh}/share/oh-my-zsh/plugins/extract/extract.plugin.zsh"
           "${zsh-you-should-use}/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh"
