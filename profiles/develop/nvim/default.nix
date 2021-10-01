@@ -76,7 +76,8 @@ in
     #    vim-numbertoggle
     # ];
 
-    extraConfig = "lua << EOF\n" + builtins.readFile ./init.lua + "\nEOF";
+    extraConfig = builtins.readFile ./init.lua;
+    # "lua << EOF\n" + builtins.readFile ./init.lua + "\nEOF";
   };
 }
 
