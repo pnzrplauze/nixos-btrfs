@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  imports = [ ./zsh ./emacs ];
+  imports = [ ./zsh ./emacs ./nvim ];
 
   # home-manager.users.jack = {
   #   imports = [ ./emacs ];
@@ -8,7 +8,6 @@
   environment.shellAliases = {
     v = "$EDITOR";
     pass = "gopass";
-    vim = "nvim";
   };
 
   environment.sessionVariables = {
@@ -28,7 +27,6 @@
     gopass
     tig
     wget
-    neovim
   ];
 
   fonts =

@@ -18,6 +18,10 @@ in
 
   services.mpd = {
     enable = true;
+    user = "jack";
+    group = "users";
+    musicDirectory = "/home/jack/music";
+    dataDir = "/home/anders/.mpd";
     extraConfig = ''
       audio_output {
         type "pulse"
