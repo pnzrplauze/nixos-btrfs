@@ -13,7 +13,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ config.boot.kernelPackages.rtw89 ];
-  # hardware.firmware = [ pkgs.linuxPackages_zen.rtw89 ];
+  hardware.firmware = [ pkgs.linuxPackages_zen.rtw89 ];
 
   fileSystems."/" =
     {
