@@ -100,7 +100,7 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 myStartupHook :: X ()
 myStartupHook = do
     -- spawnOnce "dunst &"
-    spawnOnce "emacs --daemon"
+    -- spawnOnce "emacs --daemon"
     spawnOnce "xss-lock slock &"
     spawnOnce "setxkbmap pl &"
     spawnOnce "xset r rate 300 50 &"

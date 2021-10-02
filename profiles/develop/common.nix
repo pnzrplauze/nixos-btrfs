@@ -44,8 +44,6 @@
       };
     };
 
-  services.emacs.package = pkgs.emacsPgtkGcc;
-
   # documentation = {
   #   dev.enable = true;
   #   man.generateCaches = true;
