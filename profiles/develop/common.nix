@@ -44,7 +44,7 @@
       };
     };
 
-  services.emacs.enable = true;
+  services.emacs.package = pkgs.emacsPgtkGcc;
 
   # documentation = {
   #   dev.enable = true;
