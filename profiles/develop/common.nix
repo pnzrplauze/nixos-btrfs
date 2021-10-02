@@ -44,6 +44,8 @@
       };
     };
 
+  services.emacs.enable = true;
+
   # documentation = {
   #   dev.enable = true;
   #   man.generateCaches = true;
