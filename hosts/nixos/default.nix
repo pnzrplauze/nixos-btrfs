@@ -17,7 +17,6 @@
     fileSystems = [ "/home" "/root" ];
   };
   services.snapper = {
-    snapshotRootOnBoot = false;
     snapshotInterval = "hourly";
     cleanupInterval = "1d";
     configs = {
