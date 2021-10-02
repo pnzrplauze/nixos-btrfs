@@ -3,6 +3,11 @@
 
   nixpkgs.overlays = [ inputs.emacs-overlay.overlay ];
 
+  services.emacs = {
+    enable = true;
+    package = pkgs.emacsPgtkGcc;
+  };
+
   environment.systemPackages = with pkgs; [
     ## Emacs itself
     # binutils # native-comp needs 'as', provided by this
@@ -51,7 +56,5 @@
   #modules.shell.zsh.rcFiles = [ "${configDir}/emacs/aliases.zsh" ];
 
   fonts.fonts = [ pkgs.emacs-all-the-icons-fonts ];
-
-  services.emacs.package = pkgs.emacsPgtkGcc;
 
 }
