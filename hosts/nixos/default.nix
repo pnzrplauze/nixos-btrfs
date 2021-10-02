@@ -11,7 +11,7 @@
   time.timeZone = "Europe/Warsaw";
 
   boot.supportedFilesystems = [ "btrfs" ];
-  services.btrfs.autoScurb = {
+  services.btrfs.autoScrub = {
     enable = true;
     interval = "monthly";
     fileSystems = [ "/home" "/root" ];
