@@ -10,7 +10,11 @@
   i18n.defaultLocale = "pl_PL.UTF-8";
   time.timeZone = "Europe/Warsaw";
 
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
   boot.supportedFilesystems = [ "btrfs" ];
+  services.fstrim.enable = true;
   services.btrfs.autoScrub = {
     enable = true;
     interval = "monthly";
@@ -44,28 +48,16 @@
     xorg.xset
     brightnessctl
   ];
-  # services.udev.extraRules = ''
-  #   SUBSYSTEM=="usb", ATTR{idVendor}=="3297", GROUP="input"
-  #   # Rule for the Moonlander
-  #   SUBSYSTEM=="usb", ATTR{idVendor}=="3297", ATTR{idProduct}=="1969", GROUP="input"
-  # '';
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # For Redshift - not currently used
-  # location = {
-  #   latitude = 38.833881;
-  #   longitude = -104.821365;
-  # };
-
-  # networking.useDHCP = false;
+  services.redshift.enable = true;
+  location = {
+    latitude = 52.237049;
+    longitude = 21.017532;
+  };
 
   nix.maxJobs = lib.mkDefault 16;
 
   services.xserver.videoDrivers = [ "amd" ];
-
-  # services.fstrim.enable = true;
 
   services.picom = {
     backend = "glx";
@@ -73,5 +65,13 @@
   };
 
   security.mitigations.acceptRisk = true;
+
+  # networking.useDHCP = false;
+
+  # services.udev.extraRules = ''
+  #   SUBSYSTEM=="usb", ATTR{idVendor}=="3297", GROUP="input"
+  #   # Rule for the Moonlander
+  #   SUBSYSTEM=="usb", ATTR{idVendor}=="3297", ATTR{idProduct}=="1969", GROUP="input"
+  # '';
 
 }
