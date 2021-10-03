@@ -3,11 +3,6 @@
 
   nixpkgs.overlays = [ inputs.emacs-overlay.overlay ];
 
-  services.emacs = {
-    enable = true;
-    package = pkgs.emacsPgtkGcc;
-  };
-
   environment.systemPackages = with pkgs; [
     ## Emacs itself
     # binutils # native-comp needs 'as', provided by this
