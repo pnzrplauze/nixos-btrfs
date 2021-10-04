@@ -1,0 +1,1 @@
+Naprawić NetworkManager.service --- Failed to enable unit: File /etc/systemd/system/multi-user.target.wants/NetworkManager.service: Read-only file system
