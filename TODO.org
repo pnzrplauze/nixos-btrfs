@@ -1,1 +1,3 @@
 Xmobar is not clickable --- possible reason = xmonad is started by root
+
+Work on xmobar --- inserting volume, battery and brightness into layout in primary.hs breaks xmobar
