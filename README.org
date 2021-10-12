@@ -1,2 +1,62 @@
-* Placeholder for notes about the config.
-doom emacs, wallpaper, .zshrc
+#+title: NixOS_notes
+#+author: jack
+#+date: 2021-10-01
+
+
+NixOS configuration notes:
+
+* Important [0/2]
++ [ ]
+
+* Editors
+** Doom Emacs
+*** Literate config
+**** ORG
+**** LaTeX [0/9]
++ [ ] Compilation
++ [ ] texlive
++ [ ] Pdf-viewer
++ [ ] Forward- i backward- search
++ [ ] Auto-completion
++ [ ] Linting (thanks to LSP)
++ [ ] Spell-check
++ [ ] Snippets
++ [ ] LSP (texlab)
+*** TODO Write emacs' config from scratch; tecosaur's config, even slimmed down, is so bloated that it's beyond repairing.
+*** TODO Share config in ~/jack/.config with root (for editing /etc/nixos in emacs).
+** Neovim
+For quick editing.
+*** TODO Share config in ~/jack/.config with root.
+*** TODO Call neovim's config declaratively in /etc/nixos.
+
+* Browser
+** Firefox
+*** TODO Call firefox's configuration in /etc/nixos (automatic ad-block install and so on).
+
+* WM [x]
+** xmonad with xmobar
+*** xmonad's config is pretty much done and working, same goes for xmobar. Scripts for xmobar need to be in ~/.config and available for users. Wallpaper should be named current and in ~/pix/wallpapers/
+
+* Terminal [x]
+** Alacritty + Starship
+*** It works and there's that.
+
+* File manager [x]
+** Only graphical one - PCManFM.
+
+* Shell [x]
+** ZSH
+
+* Internet [x]
+** NetworkManager
+
+* Font [x]
+
+* Image viewer
+** sxiv
+
+* Video player [x]
+** mpv
+
+* Music
+** mpd

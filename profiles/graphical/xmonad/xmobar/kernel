@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+
+kern="$(uname -r)"
+echo -e "$kern "

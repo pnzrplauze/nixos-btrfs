@@ -8,6 +8,7 @@
     xorg.xdpyinfo
     # dunst
     haskellPackages.xmobar
+    trayer
   ];
 
   services.xserver.windowManager.xmonad = {
