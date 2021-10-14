@@ -2,4 +2,4 @@
 
 (( br = $(brightnessctl get) * 100 / 255 ))
 
-echo -n " $br% "
+echo -n " $br%"

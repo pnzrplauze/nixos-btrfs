@@ -23,4 +23,4 @@ if [[ "$VALUE" -gt "10" ]]; then
 fi
 
 # Format and print
-echo "<fc=$COLOUR>$ICON$VALUE% </fc>"
+echo "<fc=$COLOUR>$ICON$VALUE%</fc>"
