@@ -96,7 +96,7 @@ myStartupHook = do
     -- spawnOnce "lxsession &"
     -- spawnOnce "volumeicon &"
     spawnOnce "xss-lock slock &"
-    spawnOnce "emacs --daemon & && emacsclient -c --eval \"(delete-frame)\""
+    spawnOnce "emacs --daemon & ; emacsclient -c --eval \"(delete-frame)\""
     spawnOnce "setxkbmap pl &"
     spawnOnce "xset r rate 300 50 &"
     spawnOnce "feh --bg-fill --no-fehbg /home/jack/pix/wallpapers/current"  -- set last saved feh wallpaper
@@ -196,7 +196,7 @@ tall     = renamed [Replace "tall"]
           $ addTabs shrinkText myTabTheme
           $ subLayout [] (smartBorders Simplest)
           $ limitWindows 12
-          $ mySpacing 8
+          $ mySpacing 3
           $ ResizableTall 1 (3/100) (1/2) []
 magnify  = renamed [Replace "magnify"]
           $ smartBorders
